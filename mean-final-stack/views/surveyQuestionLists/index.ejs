@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+
+<p><a href="/surveyQuestionLists/new">New Survey</a></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Surveyor</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <% for ( let survey of surveys ) { %>
+      <tr>
+        <td><%= survey.title %></td>
+        <td><%= survey.surveyor %></td>
+        <td>
+          <a href=<%= "/surveyAnswers/new/" + survey._id %>>Answer</a>
+          |
+          <a href=<%= "/surveyQuestionLists/" + survey._id %> >Show</a>
+          |
+          <a href=<%= "/surveyQuestionLists/" +  survey._id + "/edit" %>>Edit</a>
+          |
+          <a href=<%= "/surveyQuestionLists/" + survey._id + "/delete" %>>Delete</a>
+        </td>
+      </tr>
+    <% } %>
+</table>

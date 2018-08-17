@@ -1,0 +1,17 @@
+<% include ../partials/header %>
+
+<div>
+  <h2><%= survey.title %></h2>
+  
+  <p>
+    <small>By: <%= survey.surveyor%></small>  
+  </p>
+  
+  <div>
+    <% let count = 1 %>
+    <% for ( let question of survey.questions ) { %>
+      <p><%= count + ".  " + question.questionName %></p>
+      <% count++ %>
+    <% } %>
+  </div>
+</div>

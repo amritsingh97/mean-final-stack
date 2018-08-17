@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+
+<section>
+  <form action="/surveyQuestionLists" method="post">
+    <fieldset>
+      <legend>Survey Question List</legend>
+
+      <div class="form-group">
+        <label for="questions">Title</label>
+        <input type="text" class="form-control" id="questions" name="title" placeholder="Title" required autofocus>
+      </div>
+        
+        
+      <div class="form-group">
+        <label for="questions">Surveyor</label>
+        <input type="text" class="form-control" id="questions" name="surveyor" placeholder="enter name" required>
+      </div>
+        
+      <legend>Questions</legend>
+        
+      <% for (let x = 1; x <= 3; x++) { %>
+          <div class="form-group">
+            <label for="questions">Question <%= x %></label>
+            <input type="text" class="form-control" id="questions" name="questions" placeholder="enter question here" required>
+          </div>
+        <% } %>
+     
+    </fieldset>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary btn-lg">Create New Survey</button>
+    </div>
+  </form>
+</section>

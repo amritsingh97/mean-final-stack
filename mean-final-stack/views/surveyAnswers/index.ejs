@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Survey</th>
+      <th>Participant</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% for (let answer of answers) { %>
+      <tr>
+        <td><%= answer.surveyQuestionList.title %></td>
+        <td><%= answer.participant %></td>
+        <td>
+          <a href=<%= "/surveyAnswers/" + answer._id %>>Show</a>
+          |
+          <a href=<%= "/surveyAnswers/new/" + answer.surveyQuestionList._id %>>Answer</a>
+        </td>
+      </tr>
+    <% } %>
+</table>

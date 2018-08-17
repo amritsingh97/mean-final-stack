@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+
+<section>
+  <form action="/surveyQuestionLists/<%= survey._id %>" method="post">
+    <fieldset>
+      <legend>Survey Question List</legend>
+
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="The Crappy Survey" required value="<%= survey.title%>" autofocus>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Surveyor</label>
+        <input type="text" class="form-control" id="surveyor" name="surveyor" placeholder="Bob Bait" required value="<%= survey.surveyor%>">
+      </div>
+      
+      <% let count = 1 %>
+      <% for ( let question of survey.questions ) { %>
+        <div class="form-group">
+          <label for="questions">Question <%= count %></label>
+          <input type="text" class="form-control" id="questions" name="questions" placeholder="What?" required value="<%= question.questionName %>">
+          <% count++ %>
+        </div>
+      <% } %>
+    </fieldset>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary btn-lg">Edit Survey</button>
+    </div>
+  </form>
+</section>

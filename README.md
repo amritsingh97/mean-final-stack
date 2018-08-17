@@ -7,6 +7,6 @@ Final exam
 - Ken Alexander - 200197039
 
 # Live App
-  (Heroku Link)[https://mean-final-stack.herokuapp.com/]
+  [Heroku Link](https://mean-final-stack.herokuapp.com/)
 
 # Cheers!

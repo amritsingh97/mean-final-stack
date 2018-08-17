@@ -6,4 +6,7 @@ Final exam
 - Youngjae Kim - 200352334
 - Ken Alexander - 200197039
 
+# Live App
+  (Heroku Link)[https://mean-final-stack.herokuapp.com/]
+
 # Cheers!
